@@ -1,5 +1,11 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { primaryDarkColor, primaryColor } from '../config/colors';
+import 'react-toastify/dist/ReactToastify.css';
+import {
+  primaryDarkColor,
+  primaryColor,
+  successColor,
+  errorColor,
+} from '../config/colors';
 
 export default createGlobalStyle`
   *{
@@ -37,6 +43,15 @@ export default createGlobalStyle`
   ul{
     list-style: none;
   }
+
+  body .Toastify__toast-container .Toastify__toast--success {
+    background : ${successColor}
+  }
+  body .Toastify__toast-container .Toastify__toast--error {
+    background : ${errorColor}
+  }
+
+
 `;
 
 export const Container = styled.section`
